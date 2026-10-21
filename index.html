@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thofik Wiranata — Lead Software Engineer</title>
+<meta name="description" content="Thofik Wiranata — Lead Software Engineer at Sociolla. React Native, Vue, Node.js microservices, MongoDB, Elasticsearch. 10+ years building commerce products.">
+<meta property="og:title" content="Thofik Wiranata — Lead Software Engineer">
+<meta property="og:description" content="10+ years building mobile, web and backend systems for commerce. Lead Software Engineer at Sociolla.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fbfaf7; --surface:#ffffff; --text:#1c1b19; --muted:#6b6862; --line:#e7e3dc;
+  --accent:#d6336c; --accent-soft:#fdeef3; --chip:#f3f1ec;
+  --sans:"Source Sans 3", system-ui, -apple-system, Roboto, "Noto Sans", sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121212; --surface:#1a1a1a; --text:#ecebe8; --muted:#a19e98; --line:#2a2927;
+    --accent:#ff6b9a; --accent-soft:#2a1820; --chip:#222120;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121212; --surface:#1a1a1a; --text:#ecebe8; --muted:#a19e98; --line:#2a2927;
+  --accent:#ff6b9a; --accent-soft:#2a1820; --chip:#222120;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:400 18px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font:600 15px var(--mono);text-decoration:none}
+.logo span{color:var(--accent)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:15px}
+nav ul a{text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--text)}
+#theme{background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:16px}
+@media (max-width:640px){nav ul{display:none}}
+
+/* hero */
+.hero{padding:96px 0 64px}
+.eyebrow{font:600 13px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(40px,7vw,68px);line-height:1.05;margin:14px 0 20px;font-weight:800;letter-spacing:-.02em}
+.lead{font-size:clamp(19px,2.4vw,22px);color:var(--muted);max-width:680px;margin:0}
+.lead strong{color:var(--text);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;text-decoration:none;font-weight:600;font-size:16px;border:1px solid var(--line);background:var(--surface)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:hover{transform:translateY(-1px)}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:56px}
+.stat{background:var(--surface);padding:22px 20px}
+.stat b{display:block;font-size:32px;font-weight:800;letter-spacing:-.02em}
+.stat span{color:var(--muted);font-size:15px}
+@media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* sections */
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-size:14px;font-family:var(--mono);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+.h2-big{font-size:clamp(28px,4vw,38px);font-weight:800;letter-spacing:-.02em;margin:0 0 36px;line-height:1.15}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{margin:0 0 4px;font-size:19px}
+.card p{margin:0 0 14px;color:var(--muted);font-size:16px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:400 13px var(--mono);background:var(--chip);padding:4px 9px;border-radius:6px}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.tl li{position:relative;padding:0 0 40px 40px}
+.tl li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--line)}
+.tl li.now::before{border-color:var(--accent);background:var(--accent-soft)}
+.tl .when{font:600 13px var(--mono);color:var(--accent)}
+.tl h3{margin:2px 0 2px;font-size:22px}
+.tl .org{color:var(--muted);margin-bottom:10px}
+.tl ul{margin:8px 0 0;padding-left:18px}
+.tl ul li{padding:0 0 4px;list-style:disc}
+.tl ul li::before{display:none}
+
+/* projects */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.proj{display:flex;flex-direction:column}
+.proj .tag{font:600 12px var(--mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.proj p{flex:1}
+.proj .meta{font:400 13px var(--mono);color:var(--muted);border-top:1px dashed var(--line);padding-top:12px;margin-top:4px}
+
+.early{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:20px}
+.early .card{padding:18px}
+.early h3{font-size:17px}
+.early p{font-size:15px;margin:0}
+
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+
+footer{border-top:1px solid var(--line);padding:56px 0 72px}
+.contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.small{color:var(--muted);font-size:14px;margin-top:40px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">thofik<span>.</span>wiranata</a>
+    <ul>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme" aria-label="Toggle theme">◐</button>
+  </div>
+</nav>
+
+<main id="top">
+  <header class="hero wrap">
+    <div class="eyebrow">Lead Software Engineer · Sociolla</div>
+    <h1>Thofik Wiranata</h1>
+    <p class="lead">I build <strong>commerce products end to end</strong>: React Native apps, Vue storefronts, and the Node.js microservices, search indexes and background workers behind them. 10+ years in the field, and since 2018 at Sociolla, Indonesia's beauty and lifestyle commerce company.</p>
+    <div class="cta">
+      <a class="btn primary" href="#contact">Get in touch</a>
+      <a class="btn" href="https://github.com/thofik93" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="btn" href="https://www.linkedin.com/in/thofik-wiranata-ba7340126/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>10+</b><span>years shipping software</span></div>
+      <div class="stat"><b>8,800+</b><span>commits at Sociolla</span></div>
+      <div class="stat"><b>35+</b><span>repositories contributed to</span></div>
+      <div class="stat"><b>4.4k</b><span>commits on one mobile app</span></div>
+    </div>
+  </header>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <p class="h2-big">Full stack, from the app screen down to the indexing worker.</p>
+      <div class="skills">
+        <div class="card">
+          <h3>Mobile</h3>
+          <p>Production React Native apps: checkout, payments, product discovery, performance tuning.</p>
+          <div class="chips"><span class="chip">React Native</span><span class="chip">TypeScript</span><span class="chip">Redux Toolkit</span><span class="chip">Expo</span><span class="chip">LegendList</span><span class="chip">Firebase</span></div>
+        </div>
+        <div class="card">
+          <h3>Web front-end</h3>
+          <p>Storefronts, community platforms and admin tools for several markets, including Vietnam.</p>
+          <div class="chips"><span class="chip">Vue 2 / 3</span><span class="chip">Vuex</span><span class="chip">Pinia</span><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Tailwind</span><span class="chip">Socket.IO</span><span class="chip">SASS</span></div>
+        </div>
+        <div class="card">
+          <h3>Backend &amp; microservices</h3>
+          <p>REST services for catalog, cart, orders, payments, vouchers, shipping and accounts.</p>
+          <div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">REST API design</span><span class="chip">Firebase Admin</span><span class="chip">Jest</span></div>
+        </div>
+        <div class="card">
+          <h3>Data &amp; search</h3>
+          <p>Document and relational stores, caching, and Elasticsearch-backed product search.</p>
+          <div class="chips"><span class="chip">MongoDB</span><span class="chip">Mongoose</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">Elasticsearch</span></div>
+        </div>
+        <div class="card">
+          <h3>Async &amp; workers</h3>
+          <p>Queue consumers and sync pipelines that keep catalog, pricing and search consistent.</p>
+          <div class="chips"><span class="chip">RabbitMQ</span><span class="chip">Background workers</span><span class="chip">Data sync</span><span class="chip">Migrations</span></div>
+        </div>
+        <div class="card">
+          <h3>Leadership</h3>
+          <p>Leading cross-functional teams, owning features across services, reviewing code, debugging production.</p>
+          <div class="chips"><span class="chip">System design</span><span class="chip">Code review</span><span class="chip">Performance</span><span class="chip">Mentoring</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <p class="h2-big">From agency front-end to leading commerce engineering.</p>
+      <ol class="tl">
+        <li class="now">
+          <div class="when">2018 — Present</div>
+          <h3>Lead Software Engineer</h3>
+          <div class="org">Sociolla · Jakarta, Indonesia</div>
+          <ul>
+            <li>Lead and main contributor on the <strong>Lilla</strong> React Native app (4,400+ commits since 2021), covering checkout, payments, product detail and app-wide performance.</li>
+            <li>Build and maintain the Node.js microservices for commerce: catalog, cart, orders, payments, vouchers, shipping, accounts and public APIs.</li>
+            <li>Own cross-service features end to end, across API, background workers, Elasticsearch indexes and the mobile client. One example is per-variant product display with synced discount labels.</li>
+            <li>Shipped the Sociolla web storefront (900+ commits), the Vietnam storefront, the SOCO beauty community and the Review platform in Vue.</li>
+            <li>Built internal tooling (admin panel, employee app) and brand storefronts in Vue 3, TypeScript and Pinia.</li>
+            <li>Improved app performance, for example by migrating heavy product lists from FlatList to LegendList.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="when">2017 — 2018</div>
+          <h3>Front-end Engineer</h3>
+          <div class="org">Qeon Interactive</div>
+          <p>Built user-friendly web applications for digital media products.</p>
+        </li>
+        <li>
+          <div class="when">2016 — 2017</div>
+          <h3>Front-end Developer</h3>
+          <div class="org">Neo Digital · Jakarta</div>
+          <p>Built responsive, interactive campaign sites and microsites for brands at a digital agency.</p>
+        </li>
+        <li>
+          <div class="when">2015 — 2016</div>
+          <h3>Full-stack Developer</h3>
+          <div class="org">PT. Arca International</div>
+          <p>Handled front-end and back-end work (PHP, Laravel, CodeIgniter) across client projects.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <h2>Selected work</h2>
+      <p class="h2-big">Products I've built and maintained.</p>
+      <div class="projects">
+        <div class="card proj">
+          <div class="tag">Mobile · 2021 — now</div>
+          <h3>Lilla by Sociolla</h3>
+          <p>Shopping app for mothers and babies. I lead the app: cart, checkout and payment flows, product variants, list performance, and features like dynamic app icons.</p>
+          <div class="meta">React Native · TypeScript · Redux Toolkit</div>
+        </div>
+        <div class="card proj">
+          <div class="tag">Backend · 2022 — now</div>
+          <h3>Commerce microservices</h3>
+          <p>Catalog, cart, orders, payments, vouchers, shipping and account services behind Sociolla, SOCO and Lilla, plus queue workers that keep search and pricing in sync.</p>
+          <div class="meta">Node.js · Express · MongoDB · RabbitMQ · Redis</div>
+        </div>
+        <div class="card proj">
+          <div class="tag">Search · 2022 — now</div>
+          <h3>Product search &amp; indexing</h3>
+          <p>Elasticsearch-backed search services and indexing workers that move data from MongoDB and PostgreSQL into search-ready documents.</p>
+          <div class="meta">Elasticsearch · TypeScript · PostgreSQL</div>
+        </div>
+        <div class="card proj">
+          <div class="tag">Web · 2019 — 2025</div>
+          <h3>Sociolla storefront (ID &amp; VN)</h3>
+          <p>Customer-facing e-commerce web for Indonesia and Vietnam, with real-time features over Socket.IO.</p>
+          <div class="meta">Vue · Vuex · Socket.IO</div>
+        </div>
+        <div class="card proj">
+          <div class="tag">Community · 2018 — 2021</div>
+          <h3>SOCO &amp; Review</h3>
+          <p>Beauty community and product review platform where users discover, rate and review products.</p>
+          <div class="meta">Vue · Vuex</div>
+        </div>
+        <div class="card proj">
+          <div class="tag">Internal · 2019 — now</div>
+          <h3>Admin &amp; internal tools</h3>
+          <p>Back-office admin for catalog and operations, an employee app, and brand storefronts on a modern Vue 3 stack.</p>
+          <div class="meta">Vue 3 · TypeScript · Pinia · React Native</div>
+        </div>
+      </div>
+
+      <h2 style="margin-top:56px">Earlier agency work</h2>
+      <div class="early">
+        <div class="card"><h3>Ayana Shop</h3><p>E-commerce for Ayana Hotels: hotel stays, airport transfers and services.</p></div>
+        <div class="card"><h3>Tips Sahabat</h3><p>Automotive community forum for Daihatsu Indonesia.</p></div>
+        <div class="card"><h3>Wajah Insan Astra</h3><p>Employee photo microsite for Astra's 60th anniversary.</p></div>
+        <div class="card"><h3>Skill Contest</h3><p>Registration and online exam system for Daihatsu's CSR program.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="edu" style="margin-top:20px">
+        <div class="card"><div style="font:600 13px var(--mono);color:var(--accent)">2011 — 2015</div><h3>Mercu Buana University</h3><p>Information Systems</p></div>
+        <div class="card"><div style="font:600 13px var(--mono);color:var(--accent)">2011 — 2012</div><h3>LIA Mercu Buana</h3><p>English language program</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p class="h2-big" style="margin-bottom:0">Let's build something.</p>
+    <p class="lead">Based in Tangerang, Indonesia. Open to conversations about mobile, commerce platforms and engineering leadership.</p>
+    <div class="contact">
+      <a class="btn primary" href="https://www.linkedin.com/in/thofik-wiranata-ba7340126/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/thofik93" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <p class="small">© <span id="y"></span> Thofik Wiranata. Static site hosted on GitHub Pages.</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+(function(){
+  var root = document.documentElement, key = 'theme';
+  try { var s = localStorage.getItem(key); if (s) root.dataset.theme = s; } catch(e){}
+  document.getElementById('theme').addEventListener('click', function(){
+    var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme = dark ? 'light' : 'dark';
+    try { localStorage.setItem(key, root.dataset.theme); } catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
