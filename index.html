@@ -4,106 +4,145 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Thofik Wiranata — Lead Software Engineer</title>
-<meta name="description" content="Thofik Wiranata — Lead Software Engineer at Sociolla. React Native, Vue, Node.js microservices, MongoDB, Elasticsearch. 10+ years building commerce products.">
+<meta name="description" content="Thofik Wiranata — Lead Software Engineer at Sociolla. Founding engineer of the Lilla app. React Native, Vue, Node.js microservices, MongoDB, Elasticsearch, payments and marketplace integrations.">
 <meta property="og:title" content="Thofik Wiranata — Lead Software Engineer">
-<meta property="og:description" content="10+ years building mobile, web and backend systems for commerce. Lead Software Engineer at Sociolla.">
+<meta property="og:description" content="10+ years building commerce: React Native apps, Vue storefronts, Node.js microservices, search and payments. Lead Software Engineer at Sociolla.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thofik93.github.io/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#fbfaf7; --surface:#ffffff; --text:#1c1b19; --muted:#6b6862; --line:#e7e3dc;
-  --accent:#d6336c; --accent-soft:#fdeef3; --chip:#f3f1ec;
+  --accent:#c2255c; --accent-soft:#fdeef3; --chip:#f3f1ec; --bar:#e8a3bb;
   --sans:"Source Sans 3", system-ui, -apple-system, Roboto, "Noto Sans", sans-serif;
   --mono:"JetBrains Mono", ui-monospace, monospace;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#121212; --surface:#1a1a1a; --text:#ecebe8; --muted:#a19e98; --line:#2a2927;
-    --accent:#ff6b9a; --accent-soft:#2a1820; --chip:#222120;
+    --accent:#ff6b9a; --accent-soft:#2a1820; --chip:#232220; --bar:#8a3a57;
   }
 }
 :root[data-theme="dark"]{
   --bg:#121212; --surface:#1a1a1a; --text:#ecebe8; --muted:#a19e98; --line:#2a2927;
-  --accent:#ff6b9a; --accent-soft:#2a1820; --chip:#222120;
+  --accent:#ff6b9a; --accent-soft:#2a1820; --chip:#232220; --bar:#8a3a57;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font:400 18px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* nav */
 nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
 .logo{font:600 15px var(--mono);text-decoration:none}
 .logo span{color:var(--accent)}
-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:15px}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:15px}
 nav ul a{text-decoration:none;color:var(--muted)}
 nav ul a:hover{color:var(--text)}
-#theme{background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:16px}
-@media (max-width:640px){nav ul{display:none}}
+#theme{background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:16px;flex:none}
+@media (max-width:760px){nav ul{display:none}}
 
 /* hero */
 .hero{padding:96px 0 64px}
 .eyebrow{font:600 13px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-h1{font-size:clamp(40px,7vw,68px);line-height:1.05;margin:14px 0 20px;font-weight:800;letter-spacing:-.02em}
-.lead{font-size:clamp(19px,2.4vw,22px);color:var(--muted);max-width:680px;margin:0}
+h1{font-size:clamp(42px,7vw,72px);line-height:1.03;margin:14px 0 20px;font-weight:800;letter-spacing:-.025em}
+.lead{font-size:clamp(19px,2.4vw,22px);color:var(--muted);max-width:720px;margin:0}
 .lead strong{color:var(--text);font-weight:600}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;text-decoration:none;font-weight:600;font-size:16px;border:1px solid var(--line);background:var(--surface)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;text-decoration:none;font-weight:600;font-size:16px;border:1px solid var(--line);background:var(--surface);transition:transform .15s}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
 .btn:hover{transform:translateY(-1px)}
 
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:56px}
 .stat{background:var(--surface);padding:22px 20px}
-.stat b{display:block;font-size:32px;font-weight:800;letter-spacing:-.02em}
+.stat b{display:block;font-size:34px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
 .stat span{color:var(--muted);font-size:15px}
 @media (max-width:640px){.stats{grid-template-columns:repeat(2,1fr)}}
 
 /* sections */
-section{padding:72px 0;border-top:1px solid var(--line)}
-h2{font-size:14px;font-family:var(--mono);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
-.h2-big{font-size:clamp(28px,4vw,38px);font-weight:800;letter-spacing:-.02em;margin:0 0 36px;line-height:1.15}
+section{padding:80px 0;border-top:1px solid var(--line)}
+h2{font-size:13px;font-family:var(--mono);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+.h2-big{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.02em;margin:0 0 12px;line-height:1.15}
+.sub{color:var(--muted);margin:0 0 36px;max-width:680px}
+h3{font-size:20px;line-height:1.3;margin:0 0 6px}
 
-/* skills */
-.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
-.card h3{margin:0 0 4px;font-size:19px}
 .card p{margin:0 0 14px;color:var(--muted);font-size:16px}
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{font:400 13px var(--mono);background:var(--chip);padding:4px 9px;border-radius:6px}
 
+/* highlights */
+.hl{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.hl .card{position:relative}
+.hl .num{font-size:30px;font-weight:800;letter-spacing:-.02em;color:var(--accent);line-height:1.1;margin-bottom:6px}
+.hl p{margin:0}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+
 /* timeline */
 .tl{list-style:none;margin:0;padding:0;position:relative}
 .tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--line)}
-.tl li{position:relative;padding:0 0 40px 40px}
-.tl li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--line)}
-.tl li.now::before{border-color:var(--accent);background:var(--accent-soft)}
-.tl .when{font:600 13px var(--mono);color:var(--accent)}
-.tl h3{margin:2px 0 2px;font-size:22px}
-.tl .org{color:var(--muted);margin-bottom:10px}
-.tl ul{margin:8px 0 0;padding-left:18px}
-.tl ul li{padding:0 0 4px;list-style:disc}
-.tl ul li::before{display:none}
+.tl>li{position:relative;padding:0 0 44px 40px}
+.tl>li::before{content:"";position:absolute;left:0;top:7px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--line)}
+.tl>li.now::before{border-color:var(--accent);background:var(--accent-soft)}
+.when{font:600 13px var(--mono);color:var(--accent)}
+.tl h3{margin:2px 0 2px;font-size:23px}
+.org{color:var(--muted);margin-bottom:14px}
+.phase{margin:18px 0 0}
+.phase h4{margin:0 0 4px;font-size:17px}
+.phase h4 span{font:400 13px var(--mono);color:var(--muted);margin-left:6px}
+.phase ul{margin:4px 0 0;padding-left:20px;color:var(--muted);font-size:16.5px}
+.phase li{margin-bottom:4px}
+.phase li strong{color:var(--text);font-weight:600}
 
-/* projects */
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+/* work */
+.work{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
 .proj{display:flex;flex-direction:column}
-.proj .tag{font:600 12px var(--mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
-.proj p{flex:1}
-.proj .meta{font:400 13px var(--mono);color:var(--muted);border-top:1px dashed var(--line);padding-top:12px;margin-top:4px}
+.tag{font:600 12px var(--mono);color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.proj ul{margin:4px 0 16px;padding-left:18px;color:var(--muted);font-size:16px;flex:1}
+.proj li{margin-bottom:4px}
+.meta{font:400 13px var(--mono);color:var(--muted);border-top:1px dashed var(--line);padding-top:12px}
 
+/* integrations */
+.integ{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.integ h3{font-size:16px;margin-bottom:10px}
+
+/* chart */
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px 22px 18px}
+.chart-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chart-head h3{margin:0}
+.chart-head span{color:var(--muted);font-size:14px}
+.bars{display:grid;grid-template-columns:repeat(9,1fr);gap:10px;align-items:end;height:220px;border-bottom:1px solid var(--line);position:relative}
+.bar{position:relative;height:100%;display:flex;align-items:flex-end;cursor:default}
+.bar i{display:block;width:100%;background:var(--bar);border-radius:4px 4px 0 0;transition:background .15s}
+.bar.partial i{background:repeating-linear-gradient(135deg,var(--bar) 0 6px,color-mix(in srgb,var(--bar) 55%,transparent) 6px 10px)}
+.bar:hover i,.bar:focus i{background:var(--accent)}
+.bar b{position:absolute;left:50%;transform:translateX(-50%);font:600 12px var(--mono);color:var(--text);white-space:nowrap}
+.bar .tip{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--text);color:var(--bg);font:400 13px var(--sans);padding:6px 10px;border-radius:8px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .12s;z-index:2}
+.bar:hover .tip,.bar:focus .tip{opacity:1}
+.bar:nth-child(-n+2) .tip{left:0;transform:none}
+.bar:nth-last-child(-n+2) .tip{left:auto;right:0;transform:none}
+.years{display:grid;grid-template-columns:repeat(9,1fr);gap:10px;margin-top:8px;font:400 12px var(--mono);color:var(--muted);text-align:center}
+.chart-note{color:var(--muted);font-size:14px;margin:14px 0 0}
+.eras{display:grid;grid-template-columns:3fr 1fr 5fr;gap:10px;margin-top:10px;font:400 12px var(--mono);color:var(--muted);text-align:center}
+.eras div{border-top:2px solid var(--line);padding-top:6px}
+
+.side{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .early{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:20px}
 .early .card{padding:18px}
 .early h3{font-size:17px}
 .early p{font-size:15px;margin:0}
-
 .edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 
-footer{border-top:1px solid var(--line);padding:56px 0 72px}
-.contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.small{color:var(--muted);font-size:14px;margin-top:40px}
+footer{border-top:1px solid var(--line);padding:72px 0 80px}
+.contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.small{color:var(--muted);font-size:14px;margin-top:48px}
 </style>
 </head>
 <body>
@@ -112,20 +151,22 @@ footer{border-top:1px solid var(--line);padding:56px 0 72px}
   <div class="wrap">
     <a class="logo" href="#top">thofik<span>.</span>wiranata</a>
     <ul>
+      <li><a href="#highlights">Highlights</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#work">Work</a></li>
+      <li><a href="#activity">Activity</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <button id="theme" aria-label="Toggle theme">◐</button>
+    <button id="theme" aria-label="Toggle dark mode">◐</button>
   </div>
 </nav>
 
 <main id="top">
   <header class="hero wrap">
-    <div class="eyebrow">Lead Software Engineer · Sociolla</div>
+    <div class="eyebrow">Lead Software Engineer · Sociolla · Indonesia</div>
     <h1>Thofik Wiranata</h1>
-    <p class="lead">I build <strong>commerce products end to end</strong>: React Native apps, Vue storefronts, and the Node.js microservices, search indexes and background workers behind them. 10+ years in the field, and since 2018 at Sociolla, Indonesia's beauty and lifestyle commerce company.</p>
+    <p class="lead">I build <strong>commerce products end to end</strong>. That means the React Native app in your hand, the storefront in your browser, and the Node.js services, queues and search indexes behind the checkout button. Founding engineer of the <strong>Lilla</strong> app, and at Sociolla since 2018.</p>
     <div class="cta">
       <a class="btn primary" href="#contact">Get in touch</a>
       <a class="btn" href="https://github.com/thofik93" target="_blank" rel="noopener">GitHub ↗</a>
@@ -134,46 +175,87 @@ footer{border-top:1px solid var(--line);padding:56px 0 72px}
 
     <div class="stats">
       <div class="stat"><b>10+</b><span>years shipping software</span></div>
-      <div class="stat"><b>8,800+</b><span>commits at Sociolla</span></div>
-      <div class="stat"><b>35+</b><span>repositories contributed to</span></div>
-      <div class="stat"><b>4.4k</b><span>commits on one mobile app</span></div>
+      <div class="stat"><b>8,800+</b><span>commits across 35+ repos</span></div>
+      <div class="stat"><b>15+</b><span>payment methods integrated</span></div>
+      <div class="stat"><b>4</b><span>platforms from one codebase</span></div>
     </div>
   </header>
+
+  <section id="highlights">
+    <div class="wrap">
+      <h2>Highlights</h2>
+      <p class="h2-big">Work I'm proud of.</p>
+      <p class="sub">A few results from the last few years, taken from my commit history.</p>
+      <div class="hl">
+        <div class="card">
+          <div class="num">iOS · Android · Web</div>
+          <h3>One app, four platforms</h3>
+          <p>I've been on Lilla since its third week. One React Native/Expo codebase serves the iOS app, the Android app and the desktop and mobile web through react-native-web, across about 80 native and 86 web screens.</p>
+        </div>
+        <div class="card">
+          <div class="num">SDK 43 → 55</div>
+          <h3>Platform upgrades</h3>
+          <p>I led Expo upgrades from SDK 43 to 49 and from 53 to 55 (React Native 0.79 → 0.83). I turned on the New Architecture and Hermes, and kept the app meeting the Android 14 and 16 store requirements.</p>
+        </div>
+        <div class="card">
+          <div class="num">0.8–2s → fast</div>
+          <h3>Best-voucher engine</h3>
+          <p>It automatically picks the best voucher across caps, flash sales and "super vouchers", so the price on the product page matches the price at checkout. I also fixed the lookup latency with indexing and a refactor.</p>
+        </div>
+        <div class="card">
+          <div class="num">Vector + BM25</div>
+          <h3>Hybrid semantic search</h3>
+          <p>Product search on Elasticsearch with kNN embeddings. Query-intent detection sends exact brand or product queries to keyword ranking. Indonesian synonyms go live within minutes, without a deploy.</p>
+        </div>
+        <div class="card">
+          <div class="num">3 marketplaces</div>
+          <h3>Shopee, Tokopedia, TikTok Shop</h3>
+          <p>Catalog sync, order import, shipping labels and token refresh. Built on RabbitMQ workers so the brand can sell everywhere from one back office.</p>
+        </div>
+        <div class="card">
+          <div class="num">1-tap</div>
+          <h3>Buy Now checkout</h3>
+          <p>A one-step express checkout across the cart, voucher, shipping and order services, with in-store pickup, map pin-point addresses and delivery-time estimates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="skills">
     <div class="wrap">
       <h2>Skills</h2>
-      <p class="h2-big">Full stack, from the app screen down to the indexing worker.</p>
+      <p class="h2-big">Full stack, from the app screen to the indexing worker.</p>
+      <p class="sub">Every tool here is one I've used in production code.</p>
       <div class="skills">
         <div class="card">
           <h3>Mobile</h3>
-          <p>Production React Native apps: checkout, payments, product discovery, performance tuning.</p>
-          <div class="chips"><span class="chip">React Native</span><span class="chip">TypeScript</span><span class="chip">Redux Toolkit</span><span class="chip">Expo</span><span class="chip">LegendList</span><span class="chip">Firebase</span></div>
+          <p>Cross-platform apps with native-grade performance, plus releases and store compliance.</p>
+          <div class="chips"><span class="chip">React Native</span><span class="chip">Expo</span><span class="chip">react-native-web</span><span class="chip">TypeScript</span><span class="chip">Redux Toolkit</span><span class="chip">Reanimated</span><span class="chip">FlashList</span><span class="chip">LegendList</span><span class="chip">MMKV</span><span class="chip">New Architecture</span><span class="chip">Hermes</span></div>
         </div>
         <div class="card">
           <h3>Web front-end</h3>
-          <p>Storefronts, community platforms and admin tools for several markets, including Vietnam.</p>
-          <div class="chips"><span class="chip">Vue 2 / 3</span><span class="chip">Vuex</span><span class="chip">Pinia</span><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Tailwind</span><span class="chip">Socket.IO</span><span class="chip">SASS</span></div>
+          <p>Storefronts, community sites and admin tools, with SEO built in.</p>
+          <div class="chips"><span class="chip">Vue 2 / 3</span><span class="chip">Vuex</span><span class="chip">Pinia</span><span class="chip">Vite</span><span class="chip">Vitest</span><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Webpack</span><span class="chip">JSON-LD / SEO</span><span class="chip">Tailwind</span></div>
         </div>
         <div class="card">
           <h3>Backend &amp; microservices</h3>
-          <p>REST services for catalog, cart, orders, payments, vouchers, shipping and accounts.</p>
-          <div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">REST API design</span><span class="chip">Firebase Admin</span><span class="chip">Jest</span></div>
+          <p>REST services for catalog, cart, orders, payments, vouchers, shipping, loyalty and accounts.</p>
+          <div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">REST API design</span><span class="chip">JWT auth</span><span class="chip">Webhooks</span><span class="chip">Jest</span></div>
         </div>
         <div class="card">
           <h3>Data &amp; search</h3>
-          <p>Document and relational stores, caching, and Elasticsearch-backed product search.</p>
-          <div class="chips"><span class="chip">MongoDB</span><span class="chip">Mongoose</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">Elasticsearch</span></div>
+          <p>Schema and index design, aggregation jobs, and semantic and keyword search.</p>
+          <div class="chips"><span class="chip">MongoDB</span><span class="chip">Mongoose</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">Elasticsearch</span><span class="chip">kNN / vectors</span><span class="chip">bulkWrite batching</span></div>
         </div>
         <div class="card">
           <h3>Async &amp; workers</h3>
-          <p>Queue consumers and sync pipelines that keep catalog, pricing and search consistent.</p>
-          <div class="chips"><span class="chip">RabbitMQ</span><span class="chip">Background workers</span><span class="chip">Data sync</span><span class="chip">Migrations</span></div>
+          <p>Queue consumers and pipelines for marketplace orders, notifications, CSV imports and catalog sync.</p>
+          <div class="chips"><span class="chip">RabbitMQ</span><span class="chip">Scheduled jobs</span><span class="chip">Data migrations</span><span class="chip">Event-driven notifications</span></div>
         </div>
         <div class="card">
-          <h3>Leadership</h3>
-          <p>Leading cross-functional teams, owning features across services, reviewing code, debugging production.</p>
-          <div class="chips"><span class="chip">System design</span><span class="chip">Code review</span><span class="chip">Performance</span><span class="chip">Mentoring</span></div>
+          <h3>Leadership &amp; craft</h3>
+          <p>I own features across many services, debug production and review code for a cross-functional team.</p>
+          <div class="chips"><span class="chip">System design</span><span class="chip">Performance</span><span class="chip">Crash triage</span><span class="chip">Security hardening</span><span class="chip">Code review</span><span class="chip">Mentoring</span></div>
         </div>
       </div>
     </div>
@@ -183,37 +265,61 @@ footer{border-top:1px solid var(--line);padding:56px 0 72px}
     <div class="wrap">
       <h2>Experience</h2>
       <p class="h2-big">From agency front-end to leading commerce engineering.</p>
+      <p class="sub">Eight years at Sociolla across three eras: web, mobile, then the platform behind both.</p>
       <ol class="tl">
         <li class="now">
-          <div class="when">2018 — Present</div>
+          <div class="when">Dec 2018 — Present</div>
           <h3>Lead Software Engineer</h3>
-          <div class="org">Sociolla · Jakarta, Indonesia</div>
-          <ul>
-            <li>Lead and main contributor on the <strong>Lilla</strong> React Native app (4,400+ commits since 2021), covering checkout, payments, product detail and app-wide performance.</li>
-            <li>Build and maintain the Node.js microservices for commerce: catalog, cart, orders, payments, vouchers, shipping, accounts and public APIs.</li>
-            <li>Own cross-service features end to end, across API, background workers, Elasticsearch indexes and the mobile client. One example is per-variant product display with synced discount labels.</li>
-            <li>Shipped the Sociolla web storefront (900+ commits), the Vietnam storefront, the SOCO beauty community and the Review platform in Vue.</li>
-            <li>Built internal tooling (admin panel, employee app) and brand storefronts in Vue 3, TypeScript and Pinia.</li>
-            <li>Improved app performance, for example by migrating heavy product lists from FlatList to LegendList.</li>
-          </ul>
+          <div class="org">Sociolla, Indonesia's beauty &amp; mom-baby commerce group</div>
+
+          <div class="phase">
+            <h4>Platform &amp; backend <span>2022 — now</span></h4>
+            <ul>
+              <li>Built and maintain <strong>13+ Node.js/MongoDB microservices</strong>: catalog, cart, orders, payments, vouchers, shipping, loyalty, notifications.</li>
+              <li>Integrated payments: Midtrans cards and installments, Kredivo, ShopeePay, and <strong>QRIS over BNI's SNAP</strong> open-banking API.</li>
+              <li>Merged two loyalty programs into SOCO Points (data migration plus tier rebuild) and built a <strong>multi-channel notification center</strong>.</li>
+              <li>Built the Google Merchant Center feed, Facebook Conversions API tracking and Grab instant delivery with proof of delivery.</li>
+              <li>Extended the platform to a second brand storefront, and added customer-data masking to admin tools.</li>
+            </ul>
+          </div>
+
+          <div class="phase">
+            <h4>Lilla mobile app: founding engineer <span>2021 — now</span></h4>
+            <ul>
+              <li>Built core commerce from scratch: <strong>payments</strong>, push notifications, collections, reviews, shipping tracking.</li>
+              <li>Launched the Lilla web store on the <strong>same codebase</strong> via react-native-web, with Webpack code-splitting, prerendering and SEO.</li>
+              <li>Shipped the Baby Registry, Mom's Checklist, e-gift cards, flash sales, membership &amp; points, and an in-app notification center.</li>
+              <li>Ran a performance and stability program: list virtualization, memoized selectors, OOM and memory-leak fixes, Crashlytics crash triage.</li>
+            </ul>
+          </div>
+
+          <div class="phase">
+            <h4>Web storefronts &amp; community <span>2018 — 2021</span></h4>
+            <ul>
+              <li>Main builder of the <strong>Lilla web store</strong> (2019–20): search with autocomplete, categories, quick-view, cart, map-pin shipping, checkout.</li>
+              <li>Integrated <strong>10+ payment methods</strong> on the Sociolla and Lilla web: GoPay, OVO, LinkAja QRIS, DOKU, Xendit, Atome, virtual accounts and more.</li>
+              <li>Built Vietnam-specific features: VNPay, OnePay and MoMo gateways, and machine translation of reviews.</li>
+              <li>Redesigned SOCO (home, search, onboarding, reviews) and improved review-site SEO with JSON-LD structured data.</li>
+            </ul>
+          </div>
         </li>
         <li>
           <div class="when">2017 — 2018</div>
           <h3>Front-end Engineer</h3>
           <div class="org">Qeon Interactive</div>
-          <p>Built user-friendly web applications for digital media products.</p>
+          <p style="margin:0;color:var(--muted)">Built web applications for digital media products.</p>
         </li>
         <li>
           <div class="when">2016 — 2017</div>
           <h3>Front-end Developer</h3>
           <div class="org">Neo Digital · Jakarta</div>
-          <p>Built responsive, interactive campaign sites and microsites for brands at a digital agency.</p>
+          <p style="margin:0;color:var(--muted)">Responsive campaign sites and microsites for brands at a digital agency.</p>
         </li>
         <li>
           <div class="when">2015 — 2016</div>
           <h3>Full-stack Developer</h3>
           <div class="org">PT. Arca International</div>
-          <p>Handled front-end and back-end work (PHP, Laravel, CodeIgniter) across client projects.</p>
+          <p style="margin:0;color:var(--muted)">Front-end and back-end work for client projects in PHP, Laravel and CodeIgniter.</p>
         </li>
       </ol>
     </div>
@@ -222,49 +328,139 @@ footer{border-top:1px solid var(--line);padding:56px 0 72px}
   <section id="work">
     <div class="wrap">
       <h2>Selected work</h2>
-      <p class="h2-big">Products I've built and maintained.</p>
-      <div class="projects">
+      <p class="h2-big">Products I've built and run.</p>
+      <p class="sub">Grouped by product, with the parts I personally delivered.</p>
+      <div class="work">
         <div class="card proj">
-          <div class="tag">Mobile · 2021 — now</div>
+          <div class="tag">Mobile + Web · 2021 — now</div>
           <h3>Lilla by Sociolla</h3>
-          <p>Shopping app for mothers and babies. I lead the app: cart, checkout and payment flows, product variants, list performance, and features like dynamic app icons.</p>
-          <div class="meta">React Native · TypeScript · Redux Toolkit</div>
+          <p>Indonesia's mom &amp; baby shopping app.</p>
+          <ul>
+            <li>Checkout and payments: cards, GoPay, OVO, ShopeePay, Atome, QRIS, virtual accounts</li>
+            <li>Baby Registry, Mom's Checklist, e-gift cards, flash sale</li>
+            <li>Buy Now, in-store pickup, map pin-point, delivery estimates</li>
+            <li>Notification Center with app tour</li>
+          </ul>
+          <div class="meta">Expo · React Native · RN-web · Redux Toolkit</div>
         </div>
         <div class="card proj">
           <div class="tag">Backend · 2022 — now</div>
           <h3>Commerce microservices</h3>
-          <p>Catalog, cart, orders, payments, vouchers, shipping and account services behind Sociolla, SOCO and Lilla, plus queue workers that keep search and pricing in sync.</p>
-          <div class="meta">Node.js · Express · MongoDB · RabbitMQ · Redis</div>
+          <p>The services behind Sociolla, SOCO and Lilla.</p>
+          <ul>
+            <li>Best-voucher auto-selection and promo rules</li>
+            <li>Payment gateway layer, including QRIS (BNI SNAP)</li>
+            <li>Loyalty tiers, points migration, notification flows</li>
+            <li>Gift-with-purchase quotas, baby-registry orders</li>
+          </ul>
+          <div class="meta">Node.js · Express · MongoDB · Redis</div>
         </div>
         <div class="card proj">
-          <div class="tag">Search · 2022 — now</div>
-          <h3>Product search &amp; indexing</h3>
-          <p>Elasticsearch-backed search services and indexing workers that move data from MongoDB and PostgreSQL into search-ready documents.</p>
-          <div class="meta">Elasticsearch · TypeScript · PostgreSQL</div>
+          <div class="tag">Search · 2026</div>
+          <h3>Semantic product search</h3>
+          <p>A search service in TypeScript.</p>
+          <ul>
+            <li>384-dim dense vectors with cosine kNN</li>
+            <li>Intent probe: exact queries go to BM25, the rest to vector search</li>
+            <li>Admin-managed Indonesian synonyms, hot-reloaded</li>
+          </ul>
+          <div class="meta">TypeScript · Elasticsearch · MongoDB</div>
         </div>
         <div class="card proj">
-          <div class="tag">Web · 2019 — 2025</div>
-          <h3>Sociolla storefront (ID &amp; VN)</h3>
-          <p>Customer-facing e-commerce web for Indonesia and Vietnam, with real-time features over Socket.IO.</p>
-          <div class="meta">Vue · Vuex · Socket.IO</div>
+          <div class="tag">Integrations · 2023 — now</div>
+          <h3>Marketplace &amp; channel sync</h3>
+          <p>Sell on every channel from one back office.</p>
+          <ul>
+            <li>Shopee Mall, Tokopedia, TikTok Shop: catalog, orders, labels, webhooks</li>
+            <li>Google Merchant Center feed via the Content API</li>
+            <li>Admin tooling, CSV bulk-upload pipelines</li>
+          </ul>
+          <div class="meta">RabbitMQ workers · Vue admin · Node.js</div>
         </div>
         <div class="card proj">
-          <div class="tag">Community · 2018 — 2021</div>
-          <h3>SOCO &amp; Review</h3>
-          <p>Beauty community and product review platform where users discover, rate and review products.</p>
-          <div class="meta">Vue · Vuex</div>
+          <div class="tag">Web · 2018 — 2021</div>
+          <h3>Sociolla, SOCO &amp; Review</h3>
+          <p>Beauty e-commerce and community sites for Indonesia and Vietnam.</p>
+          <ul>
+            <li>Payments across ID and VN gateways</li>
+            <li>SOCO redesigns: home, search, onboarding, reviews</li>
+            <li>SEO: JSON-LD Product/Brand, clean URLs</li>
+            <li>"Pink University", an in-browser marketing game</li>
+          </ul>
+          <div class="meta">Vue 2 · Vuex · Webpack</div>
         </div>
         <div class="card proj">
-          <div class="tag">Internal · 2019 — now</div>
-          <h3>Admin &amp; internal tools</h3>
-          <p>Back-office admin for catalog and operations, an employee app, and brand storefronts on a modern Vue 3 stack.</p>
-          <div class="meta">Vue 3 · TypeScript · Pinia · React Native</div>
+          <div class="tag">Web · 2025 — now</div>
+          <h3>UBMOM brand site</h3>
+          <p>A mother &amp; baby brand site I built from scratch.</p>
+          <ul>
+            <li>Lazy loading, image and CDN optimization, JSON-LD</li>
+            <li>Instagram Graph API feed</li>
+            <li>Store locator sorted by distance, with directions</li>
+          </ul>
+          <div class="meta">Vue 3 · Vite · TypeScript · Pinia · Vitest</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="integrations">
+    <div class="wrap">
+      <h2>Integrations</h2>
+      <p class="h2-big">Third-party systems I've wired in.</p>
+      <p class="sub">Commerce in Southeast Asia means many gateways, couriers and channels.</p>
+      <div class="integ">
+        <div class="card"><h3>Payments: Indonesia</h3><div class="chips"><span class="chip">Midtrans</span><span class="chip">GoPay</span><span class="chip">OVO</span><span class="chip">ShopeePay</span><span class="chip">LinkAja</span><span class="chip">QRIS · BNI SNAP</span><span class="chip">DOKU</span><span class="chip">Xendit</span><span class="chip">Kredivo</span><span class="chip">Atome</span><span class="chip">GPN</span><span class="chip">Virtual accounts</span><span class="chip">Installments</span></div></div>
+        <div class="card"><h3>Payments: Vietnam</h3><div class="chips"><span class="chip">VNPay</span><span class="chip">OnePay</span><span class="chip">MoMo</span></div></div>
+        <div class="card"><h3>Marketplaces &amp; logistics</h3><div class="chips"><span class="chip">Shopee Mall</span><span class="chip">Tokopedia</span><span class="chip">TikTok Shop</span><span class="chip">Grab Express</span></div></div>
+        <div class="card"><h3>Growth &amp; analytics</h3><div class="chips"><span class="chip">Firebase</span><span class="chip">GA4</span><span class="chip">Branch</span><span class="chip">Adjust</span><span class="chip">Facebook CAPI</span><span class="chip">MoEngage</span><span class="chip">Insider</span><span class="chip">Google Merchant</span><span class="chip">Google Translate</span><span class="chip">Instagram Graph</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="activity">
+    <div class="wrap">
+      <h2>Activity</h2>
+      <p class="h2-big">Commits per year.</p>
+      <p class="sub">My non-merge commits across every repo I work in, about 5,400 in total.</p>
+      <div class="chart">
+        <div class="chart-head"><h3>Non-merge commits</h3><span>2018 – Oct 2026</span></div>
+        <div class="bars" id="bars" role="img" aria-label="Commits per year: 2018 55, 2019 341, 2020 879, 2021 424, 2022 551, 2023 851, 2024 773, 2025 674, 2026 845 through October."></div>
+        <div class="years" id="years" aria-hidden="true"></div>
+        <div class="eras" aria-hidden="true"><div>Web era</div><div>App launch</div><div>Mobile + platform</div></div>
+        <p class="chart-note">2026 is year-to-date (striped). Hover a bar for details.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="side">
+    <div class="wrap">
+      <h2>Side projects &amp; experiments</h2>
+      <p class="h2-big">Things I build to learn.</p>
+      <div class="side" style="margin-top:28px">
+        <div class="card proj">
+          <div class="tag">SaaS · 2026</div>
+          <h3>Employee workspace</h3>
+          <p>A full-stack SaaS I built alone. It has an invite flow with email verification, Stripe subscriptions and feature gating, plus notes, todos, meetings, shift scheduling and a PDF library.</p>
+          <div class="meta">Express 5 · MongoDB · Stripe · Expo · RN-web</div>
+        </div>
+        <div class="card proj">
+          <div class="tag">Hackathon · 2025</div>
+          <h3>AI review insights</h3>
+          <p>A mobile app that summarizes a product's beauty reviews with AI, shows the effects users report, and compares two products side by side.</p>
+          <div class="meta">Expo · React Native · Redux Toolkit</div>
+        </div>
+        <div class="card proj">
+          <div class="tag">Marketing · 2020</div>
+          <h3>Pink University</h3>
+          <p>An in-browser obstacle-runner game embedded in the Sociolla storefront for a brand campaign. I was the main contributor to the game engine.</p>
+          <div class="meta">JavaScript · Vue</div>
         </div>
       </div>
 
-      <h2 style="margin-top:56px">Earlier agency work</h2>
+      <h2 style="margin-top:64px">Earlier agency work · 2015 — 2017</h2>
       <div class="early">
-        <div class="card"><h3>Ayana Shop</h3><p>E-commerce for Ayana Hotels: hotel stays, airport transfers and services.</p></div>
+        <div class="card"><h3>Ayana Shop</h3><p>E-commerce for Ayana Hotels: stays, airport transfers and services.</p></div>
         <div class="card"><h3>Tips Sahabat</h3><p>Automotive community forum for Daihatsu Indonesia.</p></div>
         <div class="card"><h3>Wajah Insan Astra</h3><p>Employee photo microsite for Astra's 60th anniversary.</p></div>
         <div class="card"><h3>Skill Contest</h3><p>Registration and online exam system for Daihatsu's CSR program.</p></div>
@@ -276,8 +472,8 @@ footer{border-top:1px solid var(--line);padding:56px 0 72px}
     <div class="wrap">
       <h2>Education</h2>
       <div class="edu" style="margin-top:20px">
-        <div class="card"><div style="font:600 13px var(--mono);color:var(--accent)">2011 — 2015</div><h3>Mercu Buana University</h3><p>Information Systems</p></div>
-        <div class="card"><div style="font:600 13px var(--mono);color:var(--accent)">2011 — 2012</div><h3>LIA Mercu Buana</h3><p>English language program</p></div>
+        <div class="card"><div class="when">2011 — 2015</div><h3>Mercu Buana University</h3><p style="margin:0">Information Systems</p></div>
+        <div class="card"><div class="when">2011 — 2012</div><h3>LIA Mercu Buana</h3><p style="margin:0">English language program</p></div>
       </div>
     </div>
   </section>
@@ -286,18 +482,20 @@ footer{border-top:1px solid var(--line);padding:56px 0 72px}
 <footer id="contact">
   <div class="wrap">
     <h2>Contact</h2>
-    <p class="h2-big" style="margin-bottom:0">Let's build something.</p>
-    <p class="lead">Based in Tangerang, Indonesia. Open to conversations about mobile, commerce platforms and engineering leadership.</p>
+    <p class="h2-big">Let's build something.</p>
+    <p class="lead">Based in Tangerang, Indonesia. Happy to talk about mobile, commerce platforms, search, or engineering leadership.</p>
     <div class="contact">
       <a class="btn primary" href="https://www.linkedin.com/in/thofik-wiranata-ba7340126/" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a class="btn" href="https://github.com/thofik93" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
-    <p class="small">© <span id="y"></span> Thofik Wiranata. Static site hosted on GitHub Pages.</p>
+    <p class="small">© <span id="y"></span> Thofik Wiranata · Static site on GitHub Pages</p>
   </div>
 </footer>
 
 <script>
 document.getElementById('y').textContent = new Date().getFullYear();
+
+// theme toggle
 (function(){
   var root = document.documentElement, key = 'theme';
   try { var s = localStorage.getItem(key); if (s) root.dataset.theme = s; } catch(e){}
@@ -305,6 +503,33 @@ document.getElementById('y').textContent = new Date().getFullYear();
     var dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
     root.dataset.theme = dark ? 'light' : 'dark';
     try { localStorage.setItem(key, root.dataset.theme); } catch(e){}
+  });
+})();
+
+// commits-per-year chart
+(function(){
+  var data = [
+    [2018, 55, 'Joined Sociolla (SOCO web)'],
+    [2019, 341, 'SOCO, Review, Lilla web'],
+    [2020, 879, 'Sociolla web, payments, Vietnam'],
+    [2021, 424, 'Lilla app starts'],
+    [2022, 551, 'Lilla web launch, microservices'],
+    [2023, 851, 'Baby Registry, marketplaces'],
+    [2024, 773, 'Expo upgrades, loyalty merge'],
+    [2025, 674, 'Buy Now, UBMOM, vouchers'],
+    [2026, 845, 'Search, QRIS, notifications (YTD)']
+  ];
+  var max = 900, bars = document.getElementById('bars'), years = document.getElementById('years');
+  data.forEach(function(d, i){
+    var el = document.createElement('div');
+    el.className = 'bar' + (i === data.length - 1 ? ' partial' : '');
+    el.tabIndex = 0;
+    var h = (d[1] / max * 100);
+    el.innerHTML = '<i style="height:' + h + '%"></i>' +
+      '<b style="bottom:calc(' + h + '% + 4px)">' + d[1] + '</b>' +
+      '<span class="tip"><strong>' + d[0] + '</strong> · ' + d[1] + ' commits<br>' + d[2] + '</span>';
+    bars.appendChild(el);
+    var y = document.createElement('div'); y.textContent = d[0]; years.appendChild(y);
   });
 })();
 </script>
